@@ -13,7 +13,7 @@ export default function Registration(props) {
         type: "student",
         info: props.info,
       };
-      await fetch("/api/store-user", {
+      const res = await fetch("/api/store-user", {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
