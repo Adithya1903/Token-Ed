@@ -14,20 +14,17 @@ export default async function handler(req, res) {
     var myid = req.body['info']['user'].profileId
     const User = await Users.findOne({ profileId: myid });
 
+
     var groupid = req.body['info']['group']._id
 
-    const group = await Groups.findOne({ _id: groupid });
+    const student = await Students.findOne({user: User});
 
-    const opportunity = new Opportunities({
-        group : group,
-        tokens: req.body['info']['tokens'],
-        description : req.body['info']['description'],
-        name : req.body['info']['name']
-    });
+    const organisation = await Groups.findOne({ _id: groupid });
 
-    opportunity.save();
+    student.groups_joined.push(organisation);
+    student.save();
 
-    group.opportunities.push(opportunity);
-    group.save();
+    organisation.students.push(student);
+    organisation.save();
     res.status(200).json("success");
 }
