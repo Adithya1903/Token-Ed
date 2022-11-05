@@ -45,11 +45,8 @@ export default NextAuth({
               accountType: null,
               name: null,
             });
-            const student = new Students({
-                userid: newUser.us
-            })
             await newUser.save();
-            await student.save();
+         
           }
 
           return user;
