@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   const User = await Users.findOne({ profileId: myid });
 
   if (type == "student") {
-    const res = await Users.updateOne({ profileId: myid}, { name: 'update_name_func' , accountType: type});
+    const res = await Users.updateOne({ profileId: myid}, { name: req.body['info']['name'] , accountType: type});
 
     const student = new Students({
       user: User

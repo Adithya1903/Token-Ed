@@ -18,6 +18,12 @@ const groupSchema = new mongoose.Schema(
       }],
       status: {
         type: Number
+      },
+      vault: {
+        type: Number
+      },
+      name : {
+        tpye: String
       }
     }
   );
