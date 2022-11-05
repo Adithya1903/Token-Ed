@@ -35,7 +35,6 @@ export default NextAuth({
           // Connecting Mongo DB, retreiving
           await connectDB();
           const User = await Users.findOne({ profileId: profileId });
-          console.log(User);
 
           if (User == null) {
             console.log(null);
