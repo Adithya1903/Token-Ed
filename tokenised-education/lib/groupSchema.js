@@ -6,7 +6,7 @@ const groupSchema = new mongoose.Schema(
     {
       owner: {
         type: Schema.Types.ObjectId,
-        ref: "Professors"
+        ref: "User"
       },
       students: [{
         type: Schema.Types.ObjectId,
