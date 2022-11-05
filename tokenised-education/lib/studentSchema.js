@@ -9,7 +9,11 @@ const studentSchema = new mongoose.Schema(
         type: Schema.Types.ObjectId,
         ref: "Users"
       },
-      groups: [{
+      groups_owned: [{
+        type: Schema.Types.ObjectId,
+        ref: "Groups"
+      }],
+      groups_joined: [{
         type: Schema.Types.ObjectId,
         ref: "Groups"
       }],
