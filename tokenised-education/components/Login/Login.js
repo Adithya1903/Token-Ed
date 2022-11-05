@@ -31,14 +31,13 @@ export default function Login() {
 
     // api req to nextauth
     const signature = await signMessageAsync({ message });
-    console.log(signature);
     const { url } = await signIn("credentials", {
       message,
       signature,
       redirect: false,
-      callbackUrl: "/",
+      callbackUrl: "/registration/usertype",
     });
-    // await push(url);
+    await push(url);
   }
 
   return <button onClick={handleAuth}>Login</button>;
