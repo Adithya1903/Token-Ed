@@ -3,6 +3,7 @@ import NextAuth from "next-auth";
 import Moralis from "moralis";
 import connectDB from "../../../lib/connectDB";
 import Users from "../../../lib/userSchema";
+import Students from "../../../lib/studentSchema";
 
 export default NextAuth({
   providers: [
@@ -45,7 +46,11 @@ export default NextAuth({
               accountType: null,
               name: null,
             });
+            const student = new Students({
+                userid: newUser.us
+            })
             await newUser.save();
+            await student.save();
           }
 
           return user;
