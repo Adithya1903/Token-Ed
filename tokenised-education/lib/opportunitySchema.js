@@ -15,13 +15,18 @@ const opportunitySchema = new mongoose.Schema(
         ref: "Groups"
       },
       tokens: [{
-          type: Schema.Types.ObjectId,
-          ref: "Tokens"
+          type: Number,
       }],
       accepted_students: [{
         type: Schema.Types.ObjectId,
         ref: "Students"
-    }]
+    }],
+    description : {
+      type : String
+    },
+    name : {
+      type : String
+    }
     }
   );
 
