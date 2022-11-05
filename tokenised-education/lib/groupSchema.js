@@ -15,7 +15,10 @@ const groupSchema = new mongoose.Schema(
       opportunities: [{
           type: Schema.Types.ObjectId,
           ref: "Opportunities"
-      }]
+      }],
+      status: {
+        type: Number
+      }
     }
   );
 
