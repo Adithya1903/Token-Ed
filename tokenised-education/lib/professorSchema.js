@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import Users from "./userSchema";
-import Groups from "../groupSchema";
+import Groups from "./groupSchema";
 import Tokens from "./tokensSchema";
 
 

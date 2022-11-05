@@ -9,13 +9,17 @@ export default function Registration(props) {
     const adminCheckBox = document.getElementById("admin");
 
     if (studentCheckBox.checked == true) {
+      const data = {
+        type: "student",
+        info: props.info,
+      };
       await fetch("/api/store-user", {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(props.info),
+        body: JSON.stringify(data),
       });
       router.push("/registration");
     } else if (professorCheckBox.checked == true) {
@@ -30,7 +34,6 @@ export default function Registration(props) {
       });
       router.push("/registration");
     } else if (adminCheckBox.checked == true) {
-      const data = "student";
       await fetch("/api/store-user", {
         method: "POST",
         headers: {
