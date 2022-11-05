@@ -23,7 +23,10 @@ export default function Registration(props) {
       });
       router.push("/registration");
     } else if (professorCheckBox.checked == true) {
-      const data = "student";
+      const data = {
+        type: "professor",
+        info: props.info,
+      };
       await fetch("/api/store-user", {
         method: "POST",
         headers: {
@@ -34,6 +37,10 @@ export default function Registration(props) {
       });
       router.push("/registration");
     } else if (adminCheckBox.checked == true) {
+      const data = {
+        type: "admin",
+        info: props.info,
+      };
       await fetch("/api/store-user", {
         method: "POST",
         headers: {
