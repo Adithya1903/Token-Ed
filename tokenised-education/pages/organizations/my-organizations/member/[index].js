@@ -2,14 +2,13 @@ import { getSession } from "next-auth/react";
 import connectDB from "../../../../lib/connectDB";
 import Users from "../../../../lib/userSchema";
 import Students from "../../../../lib/studentSchema"
-import Professors from "../../../../lib/professorSchema";
 import { useRouter } from "next/router";
 
 export default function (props) {
 
 const router = useRouter();
   function addOrg() {
-    router.push("/organizations/create-an-organization")
+    router.push("/organizations/join-an-organization")
   }
 
     const groups = props.groups
