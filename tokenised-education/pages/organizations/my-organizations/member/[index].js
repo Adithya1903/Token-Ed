@@ -7,8 +7,26 @@ import { useRouter } from "next/router";
 export default function (props) {
 
 const router = useRouter();
-  function addOrg() {
-    router.push("/organizations/join-an-organization")
+  async function addOrg() {
+    //router.push("/organizations/join-an-organization")
+    const id = document.getElementById("ID").value;
+        
+        const data = {
+            info: {
+                id: id,
+                user: props.user,
+            },            
+        };
+
+        console.log(data);
+        const res = await fetch("/api/join_org", {
+            method: "POST",
+            headers: {
+              Accept: "application/json, text/plain, */*",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });        
   }
 
     const groups = props.groups
@@ -20,6 +38,10 @@ const router = useRouter();
           <li>{group}</li>
         ))}
       </ul>
+      <div>
+        <input type="text" name="" required="" id="ID"></input>
+        <label>Organization ID</label>
+      </div>
         <button onClick={addOrg}>join an organization</button>
       </div>
     );
