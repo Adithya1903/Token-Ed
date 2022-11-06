@@ -1,0 +1,153 @@
+.container {
+}
+
+.tophalfdash {
+  background-color: #ceb888;
+  height: auto;
+  width: auto;
+}
+
+.navbar {
+  text-align: center;
+  color: #ceb888;
+  background-color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.dashbody {
+  height: 600px;
+}
+
+.dashcomponents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 300px;
+  justify-content: space-around;
+  margin-top: 70px;
+}
+
+.dashorgs {
+  background-color: #ceb888;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 13px;
+  height: 400px;
+  width: 400px;
+  cursor: pointer;
+}
+
+.dashstats {
+  background-color: #ceb888;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 13px;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dashbtn {
+  width: 200px;
+  height: 50px;
+  border-style: solid;
+  border-color: #000000;
+  color: black;
+  border-radius: 13px;
+  background-color: #ceb888;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dashopps {
+  background-color: #ceb888;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 13px;
+  height: 400px;
+  width: 400px;
+  overflow: scroll;
+  cursor: pointer;
+}
+
+.dashopps::-webkit-scrollbar {
+  display: none;
+}
+
+.comptitle {
+  text-align: center;
+}
+
+.orggrid {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-gap: 10px;
+  place-items: center;
+  overflow: hidden;
+}
+
+.org {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 3px;
+  display: grid;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 100px;
+  height: 80px;
+}
+
+.oppgrid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.opp {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 3px;
+  height: 50px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-left: 3px;
+  border-right: 3px;
+  text-align: center;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.bottomhalfdash {
+  background-color: #000000;
+  height: 300px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.bottomnavbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #ceb888;
+  font-size: 30px;
+  font-weight: 600;
+  width: 1400px;
+  border-style: solid;
+  border-color: #ceb888;
+}
+
+.welcome {
+  text-align: center;
+}
