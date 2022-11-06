@@ -1,0 +1,1 @@
+// getstaticprops - kshitij
