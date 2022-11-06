@@ -1,0 +1,17 @@
+/* :root {
+  --black: #000000;
+  --white: #ffffff;
+
+  --font-size-l: 24px;
+  --font-size-m: 20px;
+  --font-size-s: 18px;
+
+  --font-family-roboto: "Roboto", Helvetica;
+} */
+.roboto-normal-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}

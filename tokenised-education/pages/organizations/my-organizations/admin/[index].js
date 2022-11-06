@@ -5,57 +5,44 @@ import Students from "../../../../lib/studentSchema";
 import { useRouter } from "next/router";
 import Professors from "../../../../lib/professorSchema";
 
-
-
-
-
-export default async function (props) {
+export default function (props) {
   const router = useRouter();
+  console.log(props.student.groups_owned);
 
   function addOrg() {
-    router.push("/organizations/create-an-organization")
+    router.push("/organizations/create-an-organization");
   }
 
   if (props.user.accountType == "student") {
-
-
-   const user = await Users.findOne({profileId : props.user.profileId});
-
-    const student = await Students.findOne({user:user})
-
-    const groups = student.groups_owned
-
+    console.log("student");
     return (
-      <div>
-        <ul>
-        {groups.map((group) => (
-          <li>{group}</li>
-        ))}
-      </ul>
-        <button onClick={addOrg}>add organizations</button>
-      </div>
+      <h1>hello</h1>
+      // <div>
+      //   <ul>
+      //     {props.student.groups_owned.map((group) => (
+      //       <li>{group}</li>
+      //     ))}
+      //   </ul>
+      //   <button onClick={addOrg}>add organizations</button>
+      // </div>
     );
   }
   if (props.user.accountType == "professor") {
+    // console.log("here");
 
-    console.log("here");
+    // const user = await Users.findOne({ profileId: props.user.profileId });
 
-    const user = await Users.findOne({ profileId: props.user.profileId });
+    // const professor = await Professors.findOne({ user: user });
 
-    const professor = await Professors.findOne({user: user})
+    // console.log(professor);
 
-    console.log(professor)
-    
-    
-        return (
-            <>
-            <div>
-            <button onClick={addOrg}>add organizations</button>
-            </div>
-            </>
-        )
-
-
+    return (
+      <>
+        <div>
+          <button onClick={addOrg}>add organizations</button>
+        </div>
+      </>
+    );
   }
   if (props.user.accountType == "admin") {
     return <h1>admin dashboard</h1>;
@@ -65,7 +52,6 @@ export default async function (props) {
 export async function getServerSideProps(context) {
   /* get user session */
   const session = await getSession(context);
-  console.log(session);
 
   if (!session) {
     return {
@@ -79,11 +65,15 @@ export async function getServerSideProps(context) {
   /* connect to mongoDB, find user and check if they need to register account details */
   await connectDB();
   const user = await Users.findOne({ profileId: session.user.profileId });
-  console.log(user.accountType);
+  console.log(user);
+  const student = await Students.findOne({ user: user });
+  console.log(student);
+  console.log(student.groups_owned);
 
   return {
     props: {
       user: JSON.parse(JSON.stringify(user)),
+      student: JSON.parse(JSON.stringify(student)),
     },
   };
 }

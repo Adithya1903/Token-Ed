@@ -1,0 +1,295 @@
+/* screen - profile */
+
+.profile {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 0px none;
+  display: flex;
+  width: 1440px;
+}
+
+.profile .overlap-group7 {
+  height: 700px;
+  position: relative;
+  width: 1440px;
+}
+
+.profile .hero-side-image-right {
+  align-items: flex-start;
+  background-color: #489d2b;
+  border: 0px none;
+  display: flex;
+  gap: 6002px;
+  height: 700px;
+  left: 0;
+  min-width: 1440px;
+  position: absolute;
+  top: 0;
+}
+
+.profile .rectangle-4 {
+  height: 100px;
+  margin-left: -6102px;
+  margin-top: -44px;
+  width: 100px;
+}
+
+.profile .overlap-group {
+  align-items: center;
+  background-image: url(../img/background@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 700px;
+  width: 1440px;
+}
+
+.profile .naviation-center {
+  align-items: center;
+  background-color: var(--white);
+  border: 0px none;
+  display: flex;
+  gap: 1125px;
+  height: 64px;
+  min-width: 1440px;
+  padding: 0 40px;
+}
+
+.profile .logo {
+  color: var(--black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 1px;
+  min-height: 29px;
+  min-width: 95px;
+}
+
+.profile .button-secondary {
+  align-items: flex-start;
+  border: 1px solid;
+  border-color: var(--black);
+  border-radius: 5px;
+  display: flex;
+  height: 40px;
+  min-width: 140px;
+  padding: 7px 16px;
+}
+
+.profile .text {
+  color: var(--black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  height: 25px;
+  letter-spacing: 0;
+  line-height: 24.3px;
+  text-align: center;
+  white-space: nowrap;
+  width: 107px;
+}
+
+.profile .flex-row {
+  align-items: flex-end;
+  display: flex;
+  gap: 43px;
+  height: 532px;
+  margin-right: 69px;
+  min-width: 1259px;
+}
+
+.profile .overlap-group3 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+  min-height: 480px;
+  padding: 23px 28px;
+  width: 174px;
+}
+
+.profile .ellipse-1 {
+  align-self: center;
+  background-color: #61d438;
+  border: 1px none;
+  border-radius: 50px;
+  height: 100px;
+  margin-right: 2px;
+  width: 100px;
+}
+
+.profile .subtitle {
+  letter-spacing: 0;
+  line-height: 28.1px;
+  min-height: 191px;
+  width: 116px;
+}
+
+.profile .flex-col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 532px;
+  width: 174px;
+}
+
+.profile .academics {
+  letter-spacing: 0;
+  line-height: 28.1px;
+  margin-right: 1px;
+  min-height: 36px;
+  width: 141px;
+}
+
+.profile .overlap-group2 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+  min-height: 480px;
+  padding: 23px 28px;
+  width: 174px;
+}
+
+.profile .ellipse-2 {
+  align-self: center;
+  background-color: #2f80f8;
+  border: 1px none;
+  border-radius: 50px;
+  height: 100px;
+  margin-right: 2px;
+  width: 100px;
+}
+
+.profile .overlap-group6 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+  min-height: 480px;
+  padding: 23px 26px;
+  width: 174px;
+}
+
+.profile .ellipse-3 {
+  align-self: center;
+  background-color: #f45252;
+  border: 1px none;
+  border-radius: 50px;
+  height: 100px;
+  margin-right: 2px;
+  width: 100px;
+}
+
+.profile .overlap-group5 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+  min-height: 480px;
+  padding: 23px 24px;
+  width: 174px;
+}
+
+.profile .image-3 {
+  align-self: center;
+  height: 100px;
+  margin-right: 1.73px;
+  object-fit: cover;
+  width: 102px;
+}
+
+.profile .organizations {
+  letter-spacing: 0;
+  line-height: 28.1px;
+  margin-left: 13px;
+  min-height: 36px;
+  width: 141px;
+}
+
+.profile .overlap-group4 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+  min-height: 480px;
+  padding: 23px 22px;
+  width: 174px;
+}
+
+.profile .image-2 {
+  align-self: center;
+  height: 100px;
+  margin-right: 2px;
+  object-fit: cover;
+  width: 100px;
+}
+
+.profile .overlap-group1 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+  min-height: 480px;
+  padding: 23px 20px;
+  width: 174px;
+}
+
+.profile .image-1 {
+  height: 100px;
+  margin-right: 15.34px;
+  object-fit: cover;
+  width: 101px;
+}
+
+.profile .carbs {
+  height: 45px;
+  left: 124px;
+  position: absolute;
+  top: 183px;
+  width: 38px;
+}
+
+.profile .setting_fill {
+  height: 45px;
+  left: 337px;
+  position: absolute;
+  top: 183px;
+  width: 45px;
+}
+
+.profile .edit_alt {
+  height: 45px;
+  left: 550px;
+  position: absolute;
+  top: 179px;
+  width: 54px;
+}

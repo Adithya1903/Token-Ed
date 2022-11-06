@@ -5,7 +5,7 @@ import Registration from "../../components/Register/Registration";
 import { useRouter } from "next/router";
 
 export default function (props) {
-  
+    
 
     return <h1>add organization page</h1>;
   
