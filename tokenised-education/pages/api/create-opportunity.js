@@ -9,17 +9,19 @@ import Opportunities from "../../lib/opportunitySchema";
 import { Description } from "@ethersproject/properties";
 
 export default async function handler(req, res) {
-  console.log(req.body);
-
   var myid = req.body["info"]["user"].profileId;
   const User = await Users.findOne({ profileId: myid });
 
   var groupid = req.body["info"]["group"];
 
   const group = await Groups.findById(groupid);
+
+  const tokens = JSON.parse(JSON.stringify(req.body["info"]["tokens"]));
+  console.log(tokens);
+
   const opportunity = new Opportunities({
     group: group,
-    tokens: req.body["info"]["tokens"],
+    tokens: tokens,
     description: req.body["info"]["description"],
     name: req.body["info"]["name"],
   });
