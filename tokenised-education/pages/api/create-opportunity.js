@@ -3,13 +3,14 @@
 import Professors from "../../lib/professorSchema";
 import Students from "../../lib/studentSchema";
 import Users from "../../lib/userSchema";
-import Triangle from "triangle";
+// import Triangle from "triangle";
 import Groups from "../../lib/groupSchema";
 import Opportunities from "../../lib/opportunitySchema";
 import { Description } from "@ethersproject/properties";
 
 
 export default async function handler(req, res) {
+    console.log(req.body);
 
     var myid = req.body['info']['user'].profileId
     const User = await Users.findOne({ profileId: myid });

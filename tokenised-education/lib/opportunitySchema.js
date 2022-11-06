@@ -15,7 +15,8 @@ const opportunitySchema = new mongoose.Schema(
         ref: "Groups"
       },
       tokens: [{
-          type: Number,
+        type: Schema.Types.ObjectId,
+        ref: "Tokens"
       }],
       accepted_students: [{
         type: Schema.Types.ObjectId,
