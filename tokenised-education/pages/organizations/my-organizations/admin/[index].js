@@ -14,6 +14,8 @@ const router = useRouter();
 
     const groups = props.groups
 
+    console.log(groups);
+
     return (
         <div>
         <ul>
