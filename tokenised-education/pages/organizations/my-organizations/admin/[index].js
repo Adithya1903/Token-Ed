@@ -9,7 +9,7 @@ import Professors from "../../../../lib/professorSchema";
 
 
 
-export default function (props) {
+export default async function (props) {
   const router = useRouter();
 
   function addOrg() {
@@ -18,11 +18,10 @@ export default function (props) {
 
   if (props.user.accountType == "student") {
 
-   console.log(props.user)
 
-   const user = Users.findOne({profileId : props.user.profileId});
+   const user = await Users.findOne({profileId : props.user.profileId});
 
-    const student = Students.findOne({user:user})
+    const student = await Students.findOne({user:user})
 
     const groups = student.groups_owned
 
@@ -38,11 +37,16 @@ export default function (props) {
     );
   }
   if (props.user.accountType == "professor") {
-    const professor = Professors.findOne({user:props.user})
 
-    const groups = professor.groups
+    console.log("here");
 
-    if (groups == null) {
+    const user = await Users.findOne({ profileId: props.user.profileId });
+
+    const professor = await Professors.findOne({user: user})
+
+    console.log(professor)
+    
+    
         return (
             <>
             <div>
@@ -50,18 +54,8 @@ export default function (props) {
             </div>
             </>
         )
-    }
 
-    return (
-      <div>
-        <ul>
-        {groups.map((group) => (
-          <li>{group}</li>
-        ))}
-      </ul>
-        <button onClick={addOrg}>add organizations</button>
-      </div>
-    );
+
   }
   if (props.user.accountType == "admin") {
     return <h1>admin dashboard</h1>;
