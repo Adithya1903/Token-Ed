@@ -20,10 +20,10 @@ const groupSchema = new mongoose.Schema(
         type: Number
       },
       vault: {
-        type: Number
+        type: String
       },
       name : {
-        tpye: String
+        type: String
       }
     }
   );

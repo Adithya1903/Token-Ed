@@ -7,7 +7,6 @@ export default function CreateOpportunity(props) {
 
     async function submitOpportunity(){
 
-        console.log("Invoked");
         const name = document.getElementById("name").value;
         const email = document.getElementById("description").value;
         const cs = document.getElementById("cstokens").value;

@@ -4,7 +4,7 @@ import Users from "../../../../lib/userSchema";
 import CreateOpportunity from "../../../../components/Opportunities/CreateOpportunity";
 import { useRouter } from "next/router";
 
-export default function UserTypePage(props) { 
+export default function CreateOpportunityPage(props) { 
   
     return (
         <div>

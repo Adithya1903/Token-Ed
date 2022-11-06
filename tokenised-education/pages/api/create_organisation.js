@@ -8,13 +8,17 @@ import Groups from "../../lib/groupSchema";
 
 
 export default async function handler(req, res) {
-  
+    console.log(req.body);
     var myid = req.body['info']['user'].profileId
     const User = await Users.findOne({ profileId: myid });
 
+    const triangle = new Triangle(process.env.TRIANGLE_API_KEY);
+    
     const vault = await triangle.vaults.create({
         name: req.body['info']['group'].name,
-      });
+    });
+
+    console.log();
 
     const group = new Groups({
         owner: User,

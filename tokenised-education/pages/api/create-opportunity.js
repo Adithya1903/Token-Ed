@@ -17,8 +17,7 @@ export default async function handler(req, res) {
 
     var groupid = req.body['info']['group']._id
 
-    const group = await Groups.findOne({ _id: groupid });
-
+    const group = await Groups.findById(groupid);
     const opportunity = new Opportunities({
         group : group,
         tokens: req.body['info']['tokens'],
