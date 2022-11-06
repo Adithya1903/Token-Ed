@@ -20,7 +20,9 @@ contract SchoolUtilityTokens is ERC1155 {
   uint256 public constant WELLNESS = 10000000;
 
   /* constructor */
-  // constructor() public ERC1155()
+  constructor(string memory _URI) public ERC1155(_URI) {
+        _URI = URI;
+    }
 
   
 
