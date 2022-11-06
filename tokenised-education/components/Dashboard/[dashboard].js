@@ -30,12 +30,12 @@ export default function Dashboard(props) {
 
   const handleCreateOrganization = (event) => {
     event.preventDefault()
-    router.push('/createorganization')
+    router.push('/create-organization')
   }
 
   const handleCreateOpportunity = (event) => {
     event.preventDefault()
-    router.push('/createopportunity')
+    router.push('/create-opportunity')
   }
 
   const handleMyProfile = (event) => {
@@ -43,15 +43,6 @@ export default function Dashboard(props) {
     router.push('/myprofile')
   }
 
-  const handleMeetTeam = (event) => {
-    event.preventDefault()
-    router.push('/meetteam')
-  }
-
-  const handleAboutUs = (event) => {
-    event.preventDefault()
-    router.push('/aboutus')
-  }
   return (
     <>
       {' '}
@@ -115,14 +106,14 @@ export default function Dashboard(props) {
 
             <div className={dashstyles.bottomhalfdash}>
               <div>
-                <nav className={dashstyles.bottomnavbar}>
+                {/* <nav className={dashstyles.bottomnavbar}>
                   <a onClick={handleMeetTeam} style={{ cursor: 'pointer' }}>
                     Meet The Team
                   </a>{' '}
                   <a onClick={handleAboutUs} style={{ cursor: 'pointer' }}>
                     About Us
                   </a>
-                </nav>
+                </nav> */}
               </div>
             </div>
           </div>
@@ -175,14 +166,14 @@ export default function Dashboard(props) {
 
           <div className={dashstyles.bottomhalfdash}>
             <div>
-              <nav className={dashstyles.bottomnavbar}>
+              {/* <nav className={dashstyles.bottomnavbar}>
                 <a onClick={handleMeetTeam} style={{ cursor: 'pointer' }}>
                   Meet The Team
                 </a>{' '}
                 <a onClick={handleAboutUs} style={{ cursor: 'pointer' }}>
                   About Us
                 </a>
-              </nav>
+              </nav> */}
             </div>
           </div>
         </div>
