@@ -10,10 +10,10 @@ export default function (props) {
     router.push("/my-profile/" + props.user.profileId.toString());
   }
   function joinedOrg() {
-    router.push("/my-organizations/member/" + props.user.profileId.toString());
+    router.push("/organizations/my-organizations/member/" + props.user.profileId.toString());
   }
   function myOrg() {
-    router.push("/my-organizations/admin/" + props.user.profileId.toString());
+    router.push("/organizations/my-organizations/admin/" + props.user.profileId.toString());
   }
   if (props.user.accountType == "student") {
     return (
@@ -28,7 +28,7 @@ export default function (props) {
   if (props.user.accountType == "professor") {
     return (
       <div>
-        <h1>account type: {props.user}</h1>
+        <h1>account type: {props.user.accountType}</h1>
         <button onClick={myProfile}>my profile</button>
         <button onClick={myOrg}>my organizations</button>
       </div>
