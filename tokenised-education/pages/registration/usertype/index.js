@@ -2,8 +2,14 @@ import { getSession, signOut } from "next-auth/react";
 import connectDB from "../../../lib/connectDB";
 import Users from "../../../lib/userSchema";
 import Registration from "../../../components/Register/Registration";
+import { useRouter } from "next/router";
 
 export default function UserTypePage(props) {
+  const router = useRouter();
+  console.log(props.registrationStatus)
+  function buttonHandler() {
+    router.push("/dashboard/" + (props.user.profileId).toString());
+  }
   if (props.registrationStatus == false) {
     return (
       <div>
@@ -12,7 +18,7 @@ export default function UserTypePage(props) {
     );
   } else {
     // if statements that tell you whether student, professor or admin. return enter dasboard button.
-    return <h1>welcome page, enter dashboard</h1>;
+    return (<button onClick={buttonHandler}>Enter Dashboard</button>);
   }
 }
 
