@@ -16,7 +16,10 @@ export default function (props) {
 
   //console.log(groups);
 
-  async function buttonHandler() {
+  async function buttonHandler(e) {
+    e.preventDefault();
+    console.log(e.target.value);
+    router.push("/organizations/" + e.target.value.toString());
     // console.log(group);
   }
 
@@ -24,7 +27,9 @@ export default function (props) {
     <div>
       <ul>
         {groups.map((group) => (
-          <button onClick={buttonHandler()}>{group}</button>
+          <button onClick={(e) => buttonHandler(e)} value={group}>
+            {group}
+          </button>
         ))}
       </ul>
       <button onClick={addOrg}>add organizations</button>
@@ -35,7 +40,6 @@ export default function (props) {
 export async function getServerSideProps(context) {
   /* get user session */
   const session = await getSession(context);
-  
 
   if (!session) {
     return {
@@ -54,15 +58,14 @@ export async function getServerSideProps(context) {
 
   if (user.accountType == "student") {
     const student = await Students.findOne({ user: user });
-    
 
     groups = student.groups_owned;
   } else if (user.accountType == "professor") {
     const professor = await Professors.findOne({ user: user });
-   
+
     groups = professor.groups;
 
-    console.log(groups)
+    console.log(groups);
   }
   if (user.accountType == "admin") {
     groups = [];
