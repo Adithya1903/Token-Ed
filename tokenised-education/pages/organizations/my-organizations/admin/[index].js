@@ -43,7 +43,13 @@ export default function (props) {
     const groups = professor.groups
 
     if (groups == null) {
-        
+        return (
+            <>
+            <div>
+            <button onClick={addOrg}>add organizations</button>
+            </div>
+            </>
+        )
     }
 
     return (
