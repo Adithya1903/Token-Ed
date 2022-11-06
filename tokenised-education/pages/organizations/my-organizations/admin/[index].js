@@ -9,7 +9,7 @@ export default function (props) {
 
 const router = useRouter();
   function addOrg() {
-    router.push("/organizations/create-an-organization")
+    router.push("/organizations/create-an-organization");
   }
 
     const groups = props.groups
@@ -29,6 +29,7 @@ const router = useRouter();
 
 
 
+    // console.log(professor);
 
 export async function getServerSideProps(context) {
     /* get user session */
