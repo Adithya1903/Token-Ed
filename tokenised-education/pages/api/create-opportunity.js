@@ -8,26 +8,25 @@ import Groups from "../../lib/groupSchema";
 import Opportunities from "../../lib/opportunitySchema";
 import { Description } from "@ethersproject/properties";
 
-
 export default async function handler(req, res) {
-    console.log(req.body);
+  console.log(req.body);
 
-    var myid = req.body['info']['user'].profileId
-    const User = await Users.findOne({ profileId: myid });
+  var myid = req.body["info"]["user"].profileId;
+  const User = await Users.findOne({ profileId: myid });
 
-    var groupid = req.body['info']['group']._id
+  var groupid = req.body["info"]["group"];
 
-    const group = await Groups.findById(groupid);
-    const opportunity = new Opportunities({
-        group : group,
-        tokens: req.body['info']['tokens'],
-        description : req.body['info']['description'],
-        name : req.body['info']['name']
-    });
+  const group = await Groups.findById(groupid);
+  const opportunity = new Opportunities({
+    group: group,
+    tokens: req.body["info"]["tokens"],
+    description: req.body["info"]["description"],
+    name: req.body["info"]["name"],
+  });
 
-    opportunity.save();
+  opportunity.save();
 
-    group.opportunities.push(opportunity);
-    group.save();
-    res.status(200).json("success");
+  group.opportunities.push(opportunity);
+  group.save();
+  res.status(200).json("success");
 }

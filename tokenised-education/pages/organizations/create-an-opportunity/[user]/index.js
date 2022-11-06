@@ -4,19 +4,21 @@ import Users from "../../../../lib/userSchema";
 import CreateOpportunity from "../../../../components/Opportunities/CreateOpportunity";
 import { useRouter } from "next/router";
 
-export default function CreateOpportunityPage(props) { 
-  
-    return (
-        <div>
-            <CreateOpportunity info={props} />
-        </div>
-    );
-    console.log(props.toString());
+export default function CreateOpportunityPage(props) {
+  return (
+    <div>
+      <CreateOpportunity info={props} />
+    </div>
+  );
+  console.log(props.toString());
 }
 
 export async function getServerSideProps(context) {
   /* get user session */
   const session = await getSession(context);
+  const groupid = context.params.user;
+  console.log(groupid);
+
   if (!session) {
     return {
       redirect: {
@@ -41,6 +43,7 @@ export async function getServerSideProps(context) {
       props: {
         registrationStatus: true,
         user: session.user,
+        groupid: groupid,
       },
     };
   }
